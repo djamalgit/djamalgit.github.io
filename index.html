@@ -308,7 +308,9 @@
                 // Тест 1: Получение версии клиента
                 const version = await bridge.send('VKWebAppGetClientVersion', {});
                 log('📱 Версия клиента:', version);
-                
+
+                const data = await bridge.send('VKWebAppGetLaunchParams', {});
+                log('🔧 VKWebAppGetLaunchParams:', data);
                 // Тест 2: Проверка поддержки методов
                 if (bridge.supports) {
                     log('🔧 Поддерживает VKWebAppInit:', bridge.supports('VKWebAppInit'));
