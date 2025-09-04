@@ -4,18 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="format-detection" content="telephone=no">
-    <title>Мое VK Mini App</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+    <title>VK Mini App - djamalgit</title>
     <style>
-        :root {
-            --vk-blue: #0077ff;
-            --vk-gray: #f5f5f5;
-            --vk-text: #000000;
-            --vk-success: #4bb34b;
-            --vk-error: #e64646;
-            --vk-warning: #ffa000;
-        }
-        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -23,11 +13,11 @@
         }
         
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
-            color: var(--vk-text);
+            color: #333;
         }
         
         .container {
@@ -40,21 +30,10 @@
         }
         
         .header {
-            background: var(--vk-blue);
+            background: #0077ff;
             color: white;
             padding: 30px 20px;
             text-align: center;
-        }
-        
-        .header h1 {
-            font-size: 28px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-        
-        .header p {
-            opacity: 0.9;
-            font-size: 16px;
         }
         
         .content {
@@ -67,25 +46,9 @@
             margin-bottom: 25px;
             text-align: center;
             font-weight: 500;
-            border: 2px solid transparent;
-        }
-        
-        .status.loading {
             background: #e3f2fd;
             color: #1976d2;
-            border-color: #bbdefb;
-        }
-        
-        .status.success {
-            background: #e8f5e9;
-            color: var(--vk-success);
-            border-color: #c8e6c9;
-        }
-        
-        .status.error {
-            background: #ffebee;
-            color: var(--vk-error);
-            border-color: #ffcdd2;
+            border: 2px solid #bbdefb;
         }
         
         .buttons-grid {
@@ -96,7 +59,7 @@
         }
         
         button {
-            background: var(--vk-blue);
+            background: #0077ff;
             color: white;
             border: none;
             padding: 16px 20px;
@@ -105,82 +68,34 @@
             font-size: 16px;
             font-weight: 500;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
         }
         
         button:hover {
             background: #0055cc;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 119, 255, 0.3);
-        }
-        
-        button:active {
-            transform: translateY(0);
         }
         
         button:disabled {
             background: #cccccc;
             cursor: not-allowed;
-            transform: none;
-            box-shadow: none;
         }
         
         .log-container {
-            background: var(--vk-gray);
+            background: #f5f5f5;
             border-radius: 12px;
             padding: 20px;
-            margin-top: 20px;
-        }
-        
-        .log-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        
-        .log-header h3 {
-            font-size: 18px;
-            color: #666;
-        }
-        
-        .clear-btn {
-            background: #666;
-            padding: 8px 16px;
-            font-size: 14px;
-        }
-        
-        .clear-btn:hover {
-            background: #555;
         }
         
         .log {
             background: white;
             padding: 15px;
             border-radius: 8px;
-            font-family: 'Fira Code', 'Monaco', 'Cascadia Code', monospace;
+            font-family: monospace;
             font-size: 12px;
             max-height: 300px;
             overflow-y: auto;
             white-space: pre-wrap;
-            line-height: 1.4;
             border: 1px solid #e0e0e0;
         }
-        
-        .log-entry {
-            margin-bottom: 8px;
-            padding: 8px;
-            border-left: 3px solid transparent;
-            background: #fafafa;
-        }
-        
-        .log-entry.success { border-left-color: var(--vk-success); }
-        .log-entry.error { border-left-color: var(--vk-error); }
-        .log-entry.warning { border-left-color: var(--vk-warning); }
-        .log-entry.info { border-left-color: var(--vk-blue); }
         
         .footer {
             text-align: center;
@@ -189,73 +104,40 @@
             font-size: 14px;
             border-top: 1px solid #eee;
         }
-        
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            
-            .header {
-                padding: 20px 15px;
-            }
-            
-            .header h1 {
-                font-size: 24px;
-            }
-            
-            .content {
-                padding: 20px 15px;
-            }
-            
-            button {
-                padding: 14px 16px;
-                font-size: 14px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>🚀 Мое VK Mini App</h1>
-            <p>Тестовое приложение для VK с ID 53849057</p>
+            <h1>🚀 VK Mini App Test</h1>
+            <p>App ID: 53849057 | GitHub Pages</p>
         </div>
         
         <div class="content">
-            <div id="status" class="status loading">
-                ⏳ Инициализация VK Bridge...
+            <div id="status" class="status">
+                🔍 Проверка окружения VK...
             </div>
             
             <div class="buttons-grid">
+                <button onclick="initVKBridge()" id="initBtn">
+                    🔄 Инициализировать VK Bridge
+                </button>
                 <button onclick="getUserInfo()" id="userInfoBtn" disabled>
                     👤 Получить информацию о пользователе
                 </button>
-                <button onclick="getClientVersion()">
+                <button onclick="getClientVersion()" id="clientVersionBtn" disabled>
                     📱 Получить версию клиента
-                </button>
-                <button onclick="showCommunityWidget()">
-                    🏢 Показать сообщество
-                </button>
-                <button onclick="checkGeodata()">
-                    📍 Проверить геоданные
-                </button>
-                <button onclick="getFriends()">
-                    👥 Получить друзей
                 </button>
             </div>
             
             <div class="log-container">
-                <div class="log-header">
-                    <h3>📋 Лог событий</h3>
-                    <button class="clear-btn" onclick="clearLog()">Очистить</button>
-                </div>
-                <div class="log" id="log"></div>
+                <h3>📋 Лог событий:</h3>
+                <div class="log" id="log">Запуск приложения...\n</div>
             </div>
         </div>
         
         <div class="footer">
-            <p>App ID: 53849057 | Group ID: 210253329</p>
-            <p>Разработано для VK Mini Apps</p>
+            <p>Разработано для VK Mini Apps | GitHub Pages</p>
         </div>
     </div>
 
@@ -263,124 +145,130 @@
     <script src="https://unpkg.com/@vkontakte/vk-bridge@latest/dist/index.js"></script>
     
     <script>
-        // Конфигурация
         const APP_ID = 53849057;
         const GROUP_ID = 210253329;
+        let isVKEnvironment = false;
         let isInitialized = false;
 
-        // Инициализация
-        document.addEventListener('DOMContentLoaded', async () => {
+        // Проверка окружения при загрузке
+        document.addEventListener('DOMContentLoaded', function() {
+            checkEnvironment();
+            checkVKPlatform();
+        });
+
+        function checkEnvironment() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const hasVKParams = urlParams.has('vk_user_id') || urlParams.has('vk_access_token_settings');
+            
+            if (typeof bridge !== 'undefined' && bridge && hasVKParams) {
+                isVKEnvironment = true;
+                log('✅ Обнаружено окружение VK Mini App');
+                updateStatus('✅ Окружение VK обнаружено');
+                document.getElementById('initBtn').disabled = false;
+            } else {
+                log('⚠️ Не обнаружено окружение VK');
+                log('ℹ️ Запустите через: https://vk.com/app53849057');
+                updateStatus('❌ Запустите через VK Mini App');
+                
+                if (typeof bridge === 'undefined') {
+                    log('❌ VK Bridge не загружен');
+                }
+            }
+        }
+
+        function checkVKPlatform() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const vkPlatform = urlParams.get('vk_platform');
+            
+            if (vkPlatform) {
+                log(`📱 VK Platform: ${vkPlatform}`);
+            }
+            
+            // Логируем все параметры URL для отладки
+            log('🔍 Параметры URL:');
+            urlParams.forEach((value, key) => {
+                log(`   ${key}=${value}`);
+            });
+        }
+
+        async function initVKBridge() {
             try {
-                addLog('🚀 Запуск инициализации VK Bridge...', 'info');
+                log('🚀 Инициализация VK Bridge...');
                 
-                // Инициализируем VK Bridge
-                const initResult = await bridge.send('VKWebAppInit', {});
-                addLog('✅ VKWebAppInit успешно выполнен', 'success');
-                
-                // Получаем информацию о клиенте
-                const clientInfo = await bridge.send('VKWebAppGetClientVersion', {});
-                addLog(`📱 Версия клиента: ${clientInfo.platform}_${clientInfo.version}`, 'info');
+                const result = await bridge.send('VKWebAppInit', {});
+                log('✅ VKWebAppInit успешен:', result);
                 
                 // Подписываемся на события
                 bridge.subscribe((event) => {
                     console.log('VK Bridge event:', event);
-                    addLog(`🔔 Событие: ${event.detail.type}`, 'info');
+                    log(`🔔 Событие: ${event.detail.type}`);
                 });
 
                 isInitialized = true;
                 document.getElementById('userInfoBtn').disabled = false;
-                updateStatus('✅ Приложение инициализировано', 'success');
+                document.getElementById('clientVersionBtn').disabled = false;
+                updateStatus('✅ VK Bridge инициализирован');
                 
             } catch (error) {
-                addLog('❌ Ошибка инициализации: ' + error.message, 'error');
-                updateStatus('❌ Ошибка инициализации', 'error');
+                log('❌ Ошибка инициализации:', error);
+                updateStatus('❌ Ошибка инициализации');
             }
-        });
-
-        // Функции логирования
-        function addLog(message, type = 'info') {
-            const logElement = document.getElementById('log');
-            const timestamp = new Date().toLocaleTimeString();
-            const logEntry = document.createElement('div');
-            
-            logEntry.className = `log-entry ${type}`;
-            logEntry.innerHTML = `<strong>[${timestamp}]</strong> ${message}`;
-            
-            logElement.prepend(logEntry);
-            
-            // Автопрокрутка к новым сообщениям
-            logElement.scrollTop = 0;
         }
 
-        function clearLog() {
-            document.getElementById('log').innerHTML = '';
-            addLog('📋 Лог очищен', 'info');
-        }
-
-        function updateStatus(message, type = 'loading') {
-            const statusElement = document.getElementById('status');
-            statusElement.textContent = message;
-            statusElement.className = `status ${type}`;
-        }
-
-        // Методы VK Bridge
         async function getUserInfo() {
             if (!isInitialized) {
-                addLog('⚠️ Приложение еще не инициализировано', 'warning');
+                log('⚠️ Сначала инициализируйте VK Bridge');
                 return;
             }
             
             try {
-                updateStatus('🔄 Запрос информации о пользователе...', 'loading');
+                log('👤 Запрос информации о пользователе...');
                 const userInfo = await bridge.send('VKWebAppGetUserInfo', {});
-                addLog(`👤 Пользователь: ${userInfo.first_name} ${userInfo.last_name}`, 'success');
-                addLog(`📍 Страна: ${userInfo.country || 'Не указана'}`, 'info');
-                updateStatus('✅ Данные пользователя получены', 'success');
+                log('✅ Информация о пользователе:', userInfo);
             } catch (error) {
-                addLog('❌ Ошибка получения пользователя: ' + error.message, 'error');
-                updateStatus('❌ Ошибка получения данных', 'error');
+                log('❌ Ошибка получения пользователя:', error);
             }
         }
 
         async function getClientVersion() {
+            if (!isInitialized) {
+                log('⚠️ Сначала инициализируйте VK Bridge');
+                return;
+            }
+            
             try {
+                log('📱 Запрос версии клиента...');
                 const version = await bridge.send('VKWebAppGetClientVersion', {});
-                addLog(`📱 Платформа: ${version.platform}, Версия: ${version.version}`, 'info');
+                log('✅ Версия клиента:', version);
             } catch (error) {
-                addLog('❌ Ошибка получения версии: ' + error.message, 'error');
+                log('❌ Ошибка получения версии:', error);
             }
         }
 
-        async function showCommunityWidget() {
-            try {
-                const result = await bridge.send('VKWebAppShowCommunityWidgetPreviewBox', {
-                    group_id: GROUP_ID,
-                    type: 'text',
-                    code: 'return { title: "Добро пожаловать!", text: "Это тестовое приложение VK Mini App" };'
-                });
-                addLog('🏢 Виджет сообщества показан', 'success');
-            } catch (error) {
-                addLog('❌ Ошибка виджета: ' + error.message, 'error');
+        function log(message, data = null) {
+            const logElement = document.getElementById('log');
+            const timestamp = new Date().toLocaleTimeString();
+            let logEntry = `[${timestamp}] ${message}`;
+            
+            if (data) {
+                logEntry += `\n${JSON.stringify(data, null, 2)}`;
             }
+            
+            logElement.textContent = logEntry + '\n\n' + logElement.textContent;
+            console.log(logEntry); // Дублируем в консоль браузера
         }
 
-        async function checkGeodata() {
-            try {
-                const geodata = await bridge.send('VKWebAppGetGeodata', {});
-                addLog(`📍 Геоданные: ${geodata.country}, ${geodata.city}`, 'info');
-            } catch (error) {
-                addLog('❌ Ошибка получения геоданных: ' + error.message, 'error');
-            }
+        function updateStatus(message) {
+            document.getElementById('status').textContent = message;
         }
 
-        async function getFriends() {
-            try {
-                const friends = await bridge.send('VKWebAppGetFriends', {});
-                addLog(`👥 Друзей: ${friends.count}`, 'info');
-            } catch (error) {
-                addLog('❌ Ошибка получения друзей: ' + error.message, 'error');
-            }
-        }
+        // Добавляем глобальную функцию для отладки
+        window.debugVK = function() {
+            console.log('=== VK DEBUG INFO ===');
+            console.log('Bridge:', typeof bridge);
+            console.log('URL params:', Object.fromEntries(new URLSearchParams(window.location.search)));
+            console.log('User Agent:', navigator.userAgent);
+        };
     </script>
 </body>
 </html>
